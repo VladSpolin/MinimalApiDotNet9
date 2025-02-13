@@ -4,6 +4,9 @@ namespace MinimalApiDotNet9.Services.Interfaces
 {
     public interface IProductService
     {
-        public Task<List<Product>> GetProductsAsync();
+         Task<List<Product>> GetProductsAsync();
+        Task<Product> GetProductByIdAsync(int productId);
+        Task<Product> CreateUpdateProductAsync(Product product);
+        Task<bool> DeleteProductAsync(int productId);
     }
 }
